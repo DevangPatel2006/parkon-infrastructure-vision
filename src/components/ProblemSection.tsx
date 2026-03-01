@@ -5,7 +5,7 @@ import { useRef } from "react";
 const problems = [
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
         <path d="M4 14h24M12 14v10M20 14v10" stroke="currentColor" strokeWidth="1.5" />
         <line x1="14" y1="19" x2="18" y2="19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -15,7 +15,7 @@ const problems = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="16" cy="16" r="10" stroke="currentColor" strokeWidth="1.5" />
         <path d="M16 10v6l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M8 6l-2-2M24 6l2-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -25,7 +25,7 @@ const problems = [
   },
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 8v4M20 16v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         <path d="M16 28h8a2 2 0 002-2V10l-6-6h-8a2 2 0 00-2 2v4" stroke="currentColor" strokeWidth="1.5" />
         <path d="M6 18l2 6h4l2-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -38,16 +38,16 @@ const problems = [
 
 export default function ProblemSection() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-32 relative" ref={ref}>
-      <div className="section-container">
+    <section className="py-20 sm:py-32 relative" ref={ref}>
+      <div className="section-container px-4">
         <motion.p
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-primary/60 mb-4"
+          className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-primary/60 mb-3 sm:mb-4"
         >
           The Problem
         </motion.p>
@@ -55,7 +55,7 @@ export default function ProblemSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl md:text-5xl font-bold mb-16 tracking-tight"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold mb-10 sm:mb-16 tracking-tight leading-tight"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           Cities weren't designed
@@ -63,17 +63,17 @@ export default function ProblemSection() {
           <span className="text-muted-foreground">for what's coming.</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {problems.map((p, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
-              className="glass-card-hover p-8"
+              className="glass-card-hover p-6 sm:p-8"
             >
-              <div className="text-primary/60 mb-6">{p.icon}</div>
-              <p className="text-xl font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <div className="text-primary/60 mb-4 sm:mb-6">{p.icon}</div>
+              <p className="text-base sm:text-xl font-semibold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 {p.text}
               </p>
             </motion.div>
