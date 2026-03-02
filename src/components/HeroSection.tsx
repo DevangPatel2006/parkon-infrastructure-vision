@@ -72,7 +72,9 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
         >
           <a
-            href="#waitlist"
+            href="https://forms.gle/u4MPw6xvRg5NWkfh8"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3 sm:py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm tracking-wide hover:shadow-[0_0_40px_hsl(145_100%_50%/0.3)] transition-all duration-500 animate-pulse-glow text-center"
           >
             Join the Waitlist

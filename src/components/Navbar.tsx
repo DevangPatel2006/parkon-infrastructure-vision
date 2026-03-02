@@ -19,7 +19,9 @@ export default function Navbar() {
           </span>
         </div>
         <a
-          href="#waitlist"
+          href="https://forms.gle/u4MPw6xvRg5NWkfh8"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sm px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-all duration-300"
         >
           Join Waitlist
