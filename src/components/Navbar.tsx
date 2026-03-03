@@ -10,7 +10,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 px-6 py-5"
     >
       <div className="max-w-6xl mx-auto flex items-center">
-        <img src={parkonLogo} alt="ParkOn" className="h-48 sm:h-56" />
+        <img src={parkonLogo} alt="ParkOn" className="h-24 sm:h-28" />
       </div>
     </motion.nav>
   );
