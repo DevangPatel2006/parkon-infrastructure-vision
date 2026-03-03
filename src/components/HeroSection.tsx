@@ -38,9 +38,6 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-4 sm:mb-6"
         >
-          <span className="inline-block text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase text-primary/70 mb-6 sm:mb-8 border border-primary/10 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 bg-primary/5">
-            Coming Soon
-          </span>
         </motion.div>
 
         <motion.h1
